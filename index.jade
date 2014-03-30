@@ -1,15 +1,45 @@
 doctype html
 meta(charset="utf-8")
+title ISEE Practice Test
 
-link(href="style.css", rel="stylesheet")
-link(href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css", rel="stylesheet")
+link(href="/public/style.css", rel="stylesheet")
+link(href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css",
+  rel="stylesheet")
 
-script(src="public/components/jquery/dist/jquery.js")
-script(src="public/components/bootstrap/dist/js/bootstrap.js")
+script(src="/public/components/jquery/dist/jquery.js")
+script(src="/public/components/bootstrap/dist/js/bootstrap.js")
 
 
 .container
+  .test-header
+    .row-test-header
+      .col-test-info
+        h3 ISEE MIDDLE #1
+        h1.top SECTION1: VERBAL REASONING
+
+      .col-test-controls
+        .test-timer
+          .form-group.pull-right
+            input.input-timer.form-control
+
+          h4.no-margin TIME REMAINING
+
+        .row-test-controls
+          .col-xs-6
+            .btn.btn-default.btn-block.btn-xs
+              i.fa.fa-pause
+              | PAUSE SECTION
+          .col-xs-6
+            .btn.btn-default.btn-block.btn-xs
+              i.fa.fa-share-square-o
+              | END SECTION
   .row
+    .pagination-container
+      ul.pagination
+        each page, i in public._data.pages
+          li: a.q-link(href="#", class=page.classes) #{i + 1}
+
+  .row-question
     .col-question
       | #{public._data.question.id}
       | !{public._data.question.question}
