@@ -1,20 +1,20 @@
 {
   "pages": [
-    { "classes": "answered" },
-    { "classes": "answered" },
-    { "classes": "answered" },
-    { "classes": "answered" },
-    { "classes": "answered" },
+    { "class": "answered" },
+    { "class": "answered" },
+    { "class": "answered" },
+    { "class": "answered" },
+    { "class": "answered" },
     {},
-    { "classes": "answered" },
-    { "classes": "flagged" },
-    { "classes": "flagged" },
-    { "classes": "answered flagged" },
-    { "classes": "answered" },
-    { "classes": "answered" },
+    { "class": "answered" },
+    { "class": "flagged" },
+    { "class": "flagged" },
+    { "class": "answered flagged" },
+    { "class": "answered" },
+    { "class": "answered" },
     {},
     {},
-    { "classes": "active" },
+    { "class": "active" },
     {},
     {},
     {},
@@ -47,7 +47,7 @@
 
     "answers": [
       { "label": "a", "text": "lorem...nostrud" },
-      { "label": "b", "text": "dolore...cupidatat" },
+      { "label": "b", "text": "dolore...cupidatat", "class": "text-center" },
       { "label": "c", "text": "officia...aliquip" },
       { "label": "d", "text": "ullamco...commodo" }
     ]

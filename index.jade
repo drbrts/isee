@@ -37,7 +37,7 @@ script(src="/public/components/bootstrap/dist/js/bootstrap.js")
     .pagination-container
       ul.pagination
         each page, i in public._data.pages
-          li: a.q-link(href="#", class=page.classes) #{i + 1}
+          li: a.q-link(href="#", class=page.class) #{i + 1}
 
   .row-question
     .col-question
@@ -46,10 +46,12 @@ script(src="/public/components/bootstrap/dist/js/bootstrap.js")
 
     .col-answers
       each answer in public._data.question.answers
-        .media.media-answer
-          .media-letter #{answer.label}
-          .media-body
-            h4.media-heading #{answer.text}
+        .row-answer
+          .col-letter
+            .answer-letter #{answer.label}
+          .col-answer(class=answer.class)
+            h4.answer-text #{answer.text}
+
 
       .answer-controls
         .text-center
