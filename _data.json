@@ -1,4 +1,7 @@
 {
+  "test": {
+    "name": "My Practice Test"
+  },
   "pages": [
     { "class": "answered" },
     { "class": "answered" },

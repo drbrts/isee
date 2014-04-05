@@ -1,0 +1,57 @@
+.test {
+  .make-row();
+  background: @primary-background;
+  padding: 0 @grid-gutter-width;
+
+  &__col--info {
+    .make-sm-column(8);
+  }
+
+  &__col--controls {
+    .make-sm-column(4);
+    padding: 10px 0;
+  }
+
+  &__timer {
+    .clearfix();
+    background: @secondary-background;
+    padding: 6px 16px;
+
+    h4 {
+      &:extend(.form-control-static);
+      font-family: "HelveticaNeue-Light";
+      line-height: 30px;
+    }
+
+    .form-group {
+      &:extend(.pull-right);
+      &:extend(.no-margin);
+    }
+
+    input {
+      &:extend(.form-control);
+      &:extend(.form-control-static);
+      &:extend(.input-sm);
+      border-radius: 15px;
+    }
+  }
+
+  &__button {
+    position: relative;
+    &:extend(.btn);
+    &:extend(.btn-xs);
+    &:extend(.btn-default);
+    &:extend(.btn-block);
+
+    i {
+      position: absolute;
+      left: 10px;
+      top: 4px;
+    }
+  }
+
+  &__controls {
+    .make-row();
+    padding-top: 10px;
+  }
+}

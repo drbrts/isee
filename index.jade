@@ -1,66 +1,51 @@
-doctype html
-meta(charset="utf-8")
-title ISEE Practice Test
+header.test
+  .test__col--info
+    h3 ISEE MIDDLE #1
+    h1.top SECTION1: VERBAL REASONING
 
-link(href="/public/style.css", rel="stylesheet")
-link(href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css",
-  rel="stylesheet")
+  .test__col--controls
+    .test__timer
+      .form-group: input
+      h4.no-margin TIME REMAINING
 
-script(src="/public/components/jquery/dist/jquery.js")
-script(src="/public/components/bootstrap/dist/js/bootstrap.js")
-
-
-.container
-  .test-header
-    .row-test-header
-      .col-test-info
-        h3 ISEE MIDDLE #1
-        h1.top SECTION1: VERBAL REASONING
-
-      .col-test-controls
-        .test-timer
-          .form-group.pull-right
-            input.input-timer.form-control
-
-          h4.no-margin TIME REMAINING
-
-        .row-test-controls
-          .col-xs-6
-            .btn.btn-default.btn-block.btn-xs
-              i.fa.fa-pause
-              | PAUSE SECTION
-          .col-xs-6
-            .btn.btn-default.btn-block.btn-xs
-              i.fa.fa-share-square-o
-              | END SECTION
-  .row
-    .pagination-container
-      ul.pagination
-        each page, i in public._data.pages
-          li: a.q-link(href="#", class=page.class) #{i + 1}
-
-  .row-question
-    .col-question
-      | #{public._data.question.id}
-      | !{public._data.question.question}
-
-    .col-answers
-      each answer in public._data.question.answers
-        .row-answer
-          .col-letter
-            .answer-letter #{answer.label}
-          .col-answer(class=answer.class)
-            h4.answer-text #{answer.text}
+    .test__controls
+      .col--half: .test__button
+        i.fa.fa-pause
+        | PAUSE SECTION
+      .col--half: .test__button
+        i.fa.fa-share-square-o
+        | END SECTION
 
 
-      .answer-controls
-        .text-center
-          .btn.btn-default.btn-xs
-            .fa.fa-flag
-            |  Flag Question
+.row
+  .pagination-container
+    ul.pagination
+      each page, i in public._data.pages
+        li: a.q-link(href="#", class=page.class) #{i + 1}
 
-        .row.controls
-          .col-xs-5.col-xs-offset-1
-            .btn.btn-block.btn-default PREV. QUESTION
-          .col-xs-5
-            .btn.btn-block.btn-primary NEXT QUESTION
+.row-question
+  .col-question
+    | #{public._data.question.id}
+    | !{public._data.question.question}
+
+  .col-answers
+    each answer in public._data.question.answers
+      .row-answer
+        .col-letter
+          .answer-letter #{answer.label}
+
+        .col-answer(class=answer.class)
+          h4.answer-text #{answer.text}
+
+
+    .answer-controls
+      .text-center
+        .btn.btn-default.btn-xs
+          .fa.fa-flag
+          |  Flag Question
+
+      .row.controls
+        .col-xs-5.col-xs-offset-1
+          .btn.btn-block.btn-default PREV. QUESTION
+        .col-xs-5
+          .btn.btn-block.btn-primary NEXT QUESTION
