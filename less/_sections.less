@@ -1,0 +1,89 @@
+.sections {
+  .make-row();
+  padding: 16px (@grid-gutter-width / 2) 18px;
+}
+
+.section {
+  .make-sm-column(12 / 5);
+  padding-top: 18px;
+  padding-bottom: 18px;
+
+  & + & {
+    border-left: 1px solid #dedede;
+  }
+
+  &__label {
+    margin-top: 0;
+    color: @gray-light;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    margin-top: 0;
+    text-align: center;
+    height: 40px;
+  }
+
+  &__separator {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__info {
+    margin-left: 15px;
+    .icon-prefix();
+    color: @gray-light;
+    height: 30px;
+
+    sub {
+      display: block
+    }
+  }
+
+  &__actions {
+    text-align: center;
+    padding-top: 10px;
+    white-space: pre-line;
+  }
+
+  &__button {
+    &:extend(.btn);
+    min-width: 50%;
+    font-family: "HelveticaNeue-CondensedBold";
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 2em;
+
+    &.start {
+      .button-variant(#ffffff, @start-background, transparent);
+    }
+
+    &.continue {
+      .button-variant(#ffffff, @inprogress-background, transparent);
+    }
+
+    &.completed {
+      pointer-events: none;
+      .button-variant(fade(@start-background, 50%), #ffffff, transparent);
+    }
+  }
+
+  &__completed {
+    .translateX(-50%);
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    display: block;
+    text-align: center;
+    color: @gray-light;
+  }
+
+  &__action {
+    &:extend(.btn);
+    &:extend(.btn-xs);
+    &:extend(.btn-default);
+    margin-bottom: .5em;
+  }
+}

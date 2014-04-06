@@ -1,0 +1,9 @@
+nav.exams
+  ul.nav
+    each exam in public._data.exams
+      li.exam(class=exam.active)
+        a.exam__link(href="#exam-#{exam.examid}", data-toggle="tab")
+          .exam__icon: img(src="http://lorempixel.com/abstract/40/40")
+          .exam__label
+            h4.exam__title #{exam.title}
+            span.exam__status(class="label-#{exam.class}") #{exam.status}

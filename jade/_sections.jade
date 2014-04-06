@@ -1,0 +1,34 @@
+.sections
+  each sec in public._data.sections
+    .section
+      h5.section__label Section #{sec.label}
+      h4.section__title #{sec.title}
+      hr.section__separator
+
+      h4.section__info
+        i.fa.fa-clock-o &nbsp;&nbsp;
+        | #{sec.minutes}
+        if sec.minutes_remaining
+          sub: small: em #{sec.minutes_remaining} Min. Remaining
+
+      h4.section__info
+        i.fa.fa-file-text-o &nbsp;&nbsp;
+        | #{sec.questions}
+        if sec.questions_remaining
+          sub: small: em #{sec.questions_remaining} Remaining
+
+      .section__actions
+        .section__button(class="#{sec.status}")
+          | #{sec.action}
+          if sec.completed
+            sub.section__completed: em Completed #{sec.completed}
+
+        br
+        .section__action
+          i.fa.fa-undo &nbsp;
+          | reset section
+
+        br
+        .section__action
+          i.fa.fa-times-circle-o &nbsp;
+          | discard section

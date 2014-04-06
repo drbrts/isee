@@ -8,6 +8,11 @@
 @module-background:          #c7d0d7;
 @module-background-light:    #f1f1f1;
 
+@purchase-background:        #65a844;
+@start-background:           #0274bb;
+@inprogress-background:      #4ea0d0;
+@completed-background:       fade(@inprogress-background, 50%);
+
 //== Colors
 //
 //## Gray and brand colors for use across Bootstrap.
@@ -67,10 +72,10 @@
 @line-height-computed:    floor((@font-size-base * @line-height-base)); // ~20px
 
 //** By default, this inherits from the `<body>`.
-@headings-font-family:    "HelveticaNeue-UltraLight";
+@headings-font-family:    @font-family-sans-serif;
 @headings-font-weight:    500;
 @headings-line-height:    1.1;
-@headings-color:          #ffffff;
+@headings-color:          @text-color;
 
 
 //-- Iconography

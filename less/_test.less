@@ -19,7 +19,6 @@
 
     h4 {
       &:extend(.form-control-static);
-      font-family: "HelveticaNeue-Light";
       line-height: 30px;
     }
 
@@ -40,8 +39,8 @@
     position: relative;
     &:extend(.btn);
     &:extend(.btn-xs);
-    &:extend(.btn-default);
     &:extend(.btn-block);
+    &:extend(.btn-default);
 
     i {
       position: absolute;
@@ -53,5 +52,10 @@
   &__controls {
     .make-row();
     padding-top: 10px;
+  }
+
+  h1 {
+    font-family: "HelveticaNeue-UltraLight";
+    color: #ffffff;
   }
 }

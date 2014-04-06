@@ -4,7 +4,7 @@
   margin: 0 auto;
 }
 
-.vac-unknown() {
+.center-unknown() {
   &.text-center {
     text-align: center;
   }
@@ -17,10 +17,26 @@
     margin-right: -10px; /* Adjusts for spacing */
     width: 10px;
   }
+
+  .inner {
+    .unknown-inner();
+  }
 }
 
-.vac-inner() {
+.unknown-inner() {
   display: inline-block;
   vertical-align: middle;
   float: none !important;
+}
+
+.icon-prefix() {
+  position: relative;
+  padding-left: 25px;
+
+  i {
+    position: absolute;
+    left: 0;
+    width: 25px;
+    text-align: center;
+  }
 }
