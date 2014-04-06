@@ -7,11 +7,12 @@ link(href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css
 
 script(src="/public/components/jquery/dist/jquery.js")
 script(src="/public/components/bootstrap/dist/js/bootstrap.js")
+script(src="/public/components/angular/angular.js")
 
 - var _data = JSON.stringify(public._data);
 script(type="text/json" id="js-data")!= _data
+script(src="/public/script.js")
 
 .container
   != yield
 
-script(src="/public/script.js")
