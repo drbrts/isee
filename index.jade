@@ -23,10 +23,10 @@ header.test
       each page, i in public._data.pages
         li: a.q-link(href="#", class=page.class) #{i + 1}
 
-.row-question
-  .col-question
-    | #{public._data.question.id}
-    | !{public._data.question.question}
+.row-question(ng-app='questions', ng-controller='question')
+  .col-question()
+    | {{question.id}} &nbsp;
+    span(ng-bind-html='question.question')
 
   .col-answers
     each answer in public._data.question.answers

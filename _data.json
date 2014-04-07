@@ -9,7 +9,7 @@
     ,  "title": "ISEE MIDDLE #2"
     ,  "status": "in progress"
     ,  "class": "inprogress"
-    ,  "active": "active"
+    ,  "active": true
     }
 
   , { "examid": 3
@@ -22,13 +22,13 @@
     , "title": "ISEE MIDDLE #4"
     , "status": "purchase"
     , "class": "purchase"
-    , "active": "inactive"
+    , "active": false
     }
   , { "examid": 5
     , "title": "ISEE MIDDLE #5"
     , "status": "purchase"
     , "class": "purchase"
-    , "active": "inactive"
+    , "active": false
     }
   ]
 , "sections": [

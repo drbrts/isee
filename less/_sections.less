@@ -1,6 +1,6 @@
 .sections {
   .make-row();
-  padding: 16px (@grid-gutter-width / 2) 18px;
+  padding: (@grid-gutter-width / 2);
 }
 
 .section {
@@ -51,7 +51,7 @@
   &__button {
     &:extend(.btn);
     min-width: 50%;
-    font-family: "HelveticaNeue-CondensedBold";
+    font-family: @font-family-block;
     text-transform: uppercase;
     position: relative;
     margin-bottom: 2em;

@@ -1,11 +1,13 @@
 angular.module 'exams', []
   .controller 'exam', ($scope) ->
-    data = JSON.parse $('#js-data').get(0).innerText
-    $scope.exams = data.exams
+    {exams} = JSON.parse $('#js-data').get(0).innerText
+    $scope.exams = exams
 
   .filter 'active', -> (active) ->
-    console.log active
-    switch active
-      when active is true then 'active'
-      when active is false then console.log 'i am here'; 'inactive'
-      else ''
+    if active is true then 'active'
+    else if active is false then 'inactive'
+
+angular.module 'questions', ['ngSanitize']
+  .controller 'question', ($scope) ->
+    {question} = JSON.parse $('#js-data').get(0).innerText
+    $scope.question = question
