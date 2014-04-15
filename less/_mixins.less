@@ -40,3 +40,27 @@
     text-align: center;
   }
 }
+
+.module() {
+  &__container {
+    .make-row();
+    background: @primary-background;
+    padding: 0 @grid-gutter-width;
+  }
+
+  &__heading {
+    font-family: "HelveticaNeue-UltraLight";
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: .02em
+  }
+
+  &__row {
+    .make-row();
+  }
+
+  .well {
+    border-radius: 0;
+    background-color: @module-background-light;
+  }
+}

@@ -1,7 +1,7 @@
-nav.exams(ng-app='exams', ng-controller='exam')
+nav.exams(ng-controller='exams')
   ul.nav
-    li.exam(ng-repeat='e in exams', class='{{e.active | active}}', ng-animate="'animate'")
-      a.exam__link(href="#exam-{{e.examid}}", data-toggle="tab")
+    li.exam(ng-repeat='e in exams' class='{{e.active}} {{e.available | available}}')
+      a.exam__link(href="#exam-{{e.examid}}" data-toggle="tab")
         .exam__icon: img(src="http://lorempixel.com/40/40/nature")
         .exam__label
           h4.exam__title {{e.title}}

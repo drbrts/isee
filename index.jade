@@ -24,7 +24,7 @@ header.test
         li: a.q-link(href="#", class=page.class) #{i + 1}
 
 .row-question(ng-app='questions', ng-controller='question')
-  .col-question()
+  .col-question
     | {{question.id}} &nbsp;
     span(ng-bind-html='question.question')
 

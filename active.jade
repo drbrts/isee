@@ -1,7 +1,9 @@
-include _user-header.jade
+include _user-header
 
-header.test
-  h1 My Practice Tests
+header.test__container
+  h1.test__heading My Practice Tests
 
-include jade/_exams.jade
-include jade/_sections.jade
+div(ng-app='isee')
+  include jade/_exams
+  include jade/_sections
+  include jade/_strategies

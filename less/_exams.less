@@ -3,7 +3,6 @@
   background: @module-background;
   padding: 10px (@grid-gutter-width / 2) 0;
   border-bottom: 3px solid @primary-background;
-
 }
 
 .exam {
@@ -44,7 +43,7 @@
     img {
       &:extend(.media-object);
 
-      .inactive & {
+      .unavailable & {
         opacity: 0.5;
       }
     }
@@ -60,7 +59,7 @@
     &:extend(.media-heading);
     color: @gray;
 
-    .inactive & {
+    .unavailable & {
       opacity: 0.5;
     }
   }

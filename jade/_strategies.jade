@@ -1,0 +1,16 @@
+.strategy__container(ng-controller='strategies')
+  h3.strategy__heading
+    | Strategies for Improvement
+    small.strategy__sub-heading
+      | See them all
+      .fa.fa-angle-double-right.fa-sm
+  .strategy__row
+    .strategy(ng-repeat='s in strategies')
+      .well
+        .strategy__image
+          img(src="http://lorempixel.com/80/80/abstract")
+        h4.strategy__title {{s.title}}
+        .strategy__description {{s.description}}
+
+    //- .strategy__block: .well
+    //- .strategy__block: .well

@@ -1,4 +1,16 @@
-{ "exams": [
+{
+  "strategies": [
+    { "title": "Vestibulum erat felis"
+    , "description": "Mauris scelerisque mattis turpis, sed pharetra dolor cursus ut. Nulla sagittis quam vitae lectus ultricies vehicula. Vestibulum ullamcorper in risus nec cursus. Nulla facilisi. Etiam at massa sed tellus semper ultricies ut in mauris. Sed dolor velit, aliquam ut tortor vel, elementum dapibus lorem. Nullam non massa sit amet massa."
+    }
+  , { "title": "Integer lacus elit"
+    , "description": "Morbi augue massa, tempor a sapien at, vehicula vehicula erat. Fusce facilisis lorem sit amet nibh blandit venenatis. Vivamus gravida dapibus molestie. Maecenas euismod nisl ut sapien suscipit, sit amet volutpat diam bibendum. Aenean nisi sem, porta in justo quis, posuere porta tellus. Sed facilisis, odio a egestas aliquam, purus."
+    }
+  , { "title": "In vestibulum aliquam"
+    , "description": "Duis ut dapibus mi. Integer malesuada ut nulla et dapibus. Aliquam lobortis, massa ut tincidunt commodo, tortor libero consectetur odio, vitae sodales metus diam commodo lectus. Nulla erat nibh, rhoncus et scelerisque in, adipiscing ut enim. Fusce tempor id mi id vestibulum. Nullam dignissim velit turpis, sit amet gravida tellus."
+    }
+  ]
+, "exams": [
     { "examid": 1
     , "title": "ISEE MIDDLE #1"
     , "status": "completed"
@@ -9,7 +21,7 @@
     ,  "title": "ISEE MIDDLE #2"
     ,  "status": "in progress"
     ,  "class": "inprogress"
-    ,  "active": true
+    ,  "active": "active"
     }
 
   , { "examid": 3
@@ -22,13 +34,13 @@
     , "title": "ISEE MIDDLE #4"
     , "status": "purchase"
     , "class": "purchase"
-    , "active": false
+    , "available": false
     }
   , { "examid": 5
     , "title": "ISEE MIDDLE #5"
     , "status": "purchase"
     , "class": "purchase"
-    , "active": false
+    , "available": false
     }
   ]
 , "sections": [
