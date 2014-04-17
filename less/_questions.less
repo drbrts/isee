@@ -26,11 +26,8 @@
       position: relative;
       display: block;
       counter-increment: questions-counter;
-      text-align: justify;
-      height: 20px;
-      line-height: 20px;
       font-size: 16px;
-
+      letter-spacing: .1em;
       &:first-child {
         counter-reset: questions-counter;
       }
@@ -41,12 +38,6 @@
         right: 100%;
         text-align: right;
         padding-right: .5em;
-      }
-
-      &::after {
-        content: '';
-        display: inline-block;
-        width: 100%;
       }
     }
   }
@@ -67,7 +58,7 @@
   min-height: 55px;
 
   &__col--main {
-    .make-xs-column(10);
+    .make-xs-column(9);
     .unknown-inner();
   }
 
