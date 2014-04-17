@@ -1,15 +1,5 @@
-.pagination-container {
-  padding: 12px 0;
-  text-align: center;
-  font-family: "HelveticaNeue";
-  font-size: 12px;
-  border-bottom: 4px solid @primary-background;
-  background: @module-background;
-  height: 58px;
-
-  .pagination {
-    margin: 0 auto;
-  }
+.pagination {
+  margin: 0 auto;
 
   li {
     &:first-child > a {
@@ -21,7 +11,17 @@
     }
   }
 
-  .q-link {
+  &__container {
+    padding: 12px 0;
+    text-align: center;
+    font-family: "HelveticaNeue";
+    font-size: 12px;
+    border-bottom: 4px solid @primary-background;
+    background: @module-background;
+    height: 58px;
+  }
+
+  & &__link {
     border: 0;
     line-height: 30px;
     padding: 0;

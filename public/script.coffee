@@ -13,5 +13,9 @@ angular.module 'isee', ['ngSanitize']
   .controller 'sections', ($scope) ->
     $scope.sections = getData 'sections'
 
+  .controller 'pagination', ($scope) ->
+    $scope.pages = getData 'pages'
+
+
   .filter 'available', -> (available) ->
     if available is false then 'unavailable'
