@@ -7,6 +7,9 @@ angular.module 'isee', ['ngSanitize']
   .controller 'question', ($scope) ->
     $scope.question = getData 'question'
 
+  .controller 'essay', ($scope) ->
+    $scope.essay = getData 'essay'
+
   .controller 'strategies', ($scope) ->
     $scope.strategies = getData 'strategies'
 

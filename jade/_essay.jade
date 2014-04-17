@@ -1,0 +1,24 @@
+.question__container
+  .question__col--main(ng-controller='essay')
+    ol.question__essay
+      li(ng-repeat="line in essay.question") {{line}}
+
+  .question__col--answers(ng-controller='question')
+    .answer(ng-repeat='answer in question.answers')
+      .answer__col--letter
+        .answer__letter {{answer.label}}
+
+      .answer__col--main
+        h4.answer__text {{answer.text}}
+
+
+    .answer__controls
+      .text-center
+        .btn.btn-default.btn-xs
+          .fa.fa-flag  Flag Question
+
+      .answer__footer
+        .col-xs-5.col-xs-offset-1
+          .btn.btn-block.btn-default PREV. QUESTION
+        .col-xs-5
+          .btn.btn-block.btn-primary NEXT QUESTION

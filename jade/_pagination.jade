@@ -1,0 +1,5 @@
+.row
+  .pagination__container
+    ul.pagination(ng-controller='pagination')
+      li(ng-repeat='page in pages')
+        a.pagination__link(href="#" class='{{page.class}}') {{$index + 1}}

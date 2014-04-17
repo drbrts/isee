@@ -142,4 +142,33 @@
       { "label": "d", "text": "ullamco...commodo" }
     ]
   }
+, "essay":
+  { "id": "17."
+  , "question":
+    [ "Etiam laoreet turpis ipsum, et"
+    , "ullamcorper nisl venenatis ac."
+    , "Mauris vulputate sollicitudin ipsum,"
+    , "Maecenas quam turpis, lobortis ac"
+    , "elit vel, blandit fermentum dolor."
+    , "Fusce egestas quam id dolor fringilla"
+    , "sodales. Proin placerat vestibulum "
+    , "vestibulum. Donec bibendum in elit id"
+    , "lobortis. Fusce euismod purus dapibus"
+    , "mattis commodo. Integer suscipit,"
+    , "tellus sit amet condimentum suscipit, "
+    , "justo arcu consectetur neque, pulvinar"
+    , "accumsan turpis sapien eu odio."
+    , "Curabitur nibh diam, vulputate eget"
+    , "posuere non, aliquam ultricies nunc."
+    , "Etiam tempus metus eget mauris"
+    , "faucibus volutpat. Mauris quis"
+    , "accumsan lectus. Suspendisse cursus,"
+    , "magna nec aliquam malesuada, risus"
+    , "lectus aliquet libero, convallis"
+    , "varius orci dui et elit. Pellentesque"
+    , "facilisis justo sed elementum dapibus."
+    , "Morbi magna nulla, ornare in diam eget,"
+    , "porta molestie nisi"
+    ]
+  }
 }

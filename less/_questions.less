@@ -1,4 +1,7 @@
 .question {
+  font-size: @font-size-h3;
+  line-height: 1.33;
+
   &__container {
     .center-column();
   }
@@ -7,16 +10,45 @@
     .make-sm-column(7);
     height: 100%;
     padding-top: @grid-gutter-width;
-    font-size: @font-size-h3;
-    line-height: 1.33;
-
   }
 
-  &__col--answer {
+  &__col--answers {
     .make-sm-column(5);
     height: 100%;
     padding-top: @grid-gutter-width - 10px;
     background-color: #f1f1f1;
+  }
+
+  &__essay {
+    list-style-type: none;
+
+    & > li {
+      position: relative;
+      display: block;
+      counter-increment: questions-counter;
+      text-align: justify;
+      height: 20px;
+      line-height: 20px;
+      font-size: 16px;
+
+      &:first-child {
+        counter-reset: questions-counter;
+      }
+
+      &::before {
+        content: counter(questions-counter) " ";
+        position: absolute;
+        right: 100%;
+        text-align: right;
+        padding-right: .5em;
+      }
+
+      &::after {
+        content: '';
+        display: inline-block;
+        width: 100%;
+      }
+    }
   }
 }
 
@@ -36,13 +68,11 @@
 
   &__col--main {
     .make-xs-column(10);
-    .make-lg-column(11);
     .unknown-inner();
   }
 
   &__col--letter {
     .make-xs-column(2, 0);
-    .make-lg-column(1, 0);
     .unknown-inner();
   }
 
