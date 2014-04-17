@@ -1,7 +1,7 @@
-header.test
+header.test__container
   .test__col--info
-    h3 ISEE MIDDLE #1
-    h1.top SECTION1: VERBAL REASONING
+    h3.test__heading ISEE MIDDLE #1
+    h1.test__heading.top SECTION1: VERBAL REASONING
 
   .test__col--controls
     .test__timer
@@ -23,19 +23,18 @@ header.test
       each page, i in public._data.pages
         li: a.q-link(href="#", class=page.class) #{i + 1}
 
-.row-question(ng-app='questions', ng-controller='question')
+.row-question(ng-controller='question')
   .col-question
     | {{question.id}} &nbsp;
     span(ng-bind-html='question.question')
 
   .col-answers
-    each answer in public._data.question.answers
-      .row-answer
-        .col-letter
-          .answer-letter #{answer.label}
+    .row-answer(ng-repeat='answer in question.answers')
+      .col-letter
+        .answer-letter {{answer.label}}
 
-        .col-answer(class=answer.class)
-          h4.answer-text #{answer.text}
+      .col-answer(class='{{answer.class}}')
+        h4.answer-text {{answer.text}}
 
 
     .answer-controls
