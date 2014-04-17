@@ -1,20 +1,23 @@
-.row-question {
-  .center-column();
-}
+.question {
+  &__container {
+    .center-column();
+  }
 
-.col-question {
-  .make-sm-column(7);
-  height: 100%;
-  padding-top: @grid-gutter-width;
-  font-size: @font-size-h3;
-  line-height: 1.33;
-}
+  &__col--main {
+    .make-sm-column(7);
+    height: 100%;
+    padding-top: @grid-gutter-width;
+    font-size: @font-size-h3;
+    line-height: 1.33;
 
-.col-answers {
-  .make-sm-column(5);
-  height: 100%;
-  padding-top: @grid-gutter-width - 10px;
-  background-color: #f1f1f1;
+  }
+
+  &__col--answer {
+    .make-sm-column(5);
+    height: 100%;
+    padding-top: @grid-gutter-width - 10px;
+    background-color: #f1f1f1;
+  }
 }
 
 .blank {
@@ -23,59 +26,59 @@
   border-bottom: 1px solid @gray;
 }
 
-.row-answer {
+.answer {
   .make-row();
   .center-unknown();
   margin: 0;
   padding: 10px 0;
   border-bottom: 1px solid @gray;
   min-height: 55px;
-}
 
-
-.col-letter {
-  .make-xs-column(2, 0);
-  .make-lg-column(1, 0);
-  .unknown-inner();
-}
-
-.col-answer {
-  .make-xs-column(10);
-  .make-lg-column(11);
-  .unknown-inner();
-}
-
-.answer-letter {
-  height: 35px;
-  width: 35px;
-  line-height: 33px;
-  text-align: center;
-  font-family: @font-family-block;
-  font-size: 16px;
-  text-transform: uppercase;
-  border-radius: 50%;
-  border: 1px solid @gray-light;
-
-  &.active,
-  .row-answer:hover & {
-    background-color: @brand-primary;
-    border-color: @brand-primary;
-    color: #ffffff;
+  &__col--main {
+    .make-xs-column(10);
+    .make-lg-column(11);
+    .unknown-inner();
   }
-}
 
-.answer-text {
-  color: @gray;
-  font-family: @font-family-sans-serif;
-  margin: 0;
-}
+  &__col--letter {
+    .make-xs-column(2, 0);
+    .make-lg-column(1, 0);
+    .unknown-inner();
+  }
 
-.answer-controls {
-  padding-top: @grid-gutter-width / 2;
+  &__letter {
+    height: 35px;
+    width: 35px;
+    line-height: 33px;
+    text-align: center;
+    font-family: @font-family-block;
+    font-size: 16px;
+    text-transform: uppercase;
+    border-radius: 50%;
+    border: 1px solid @gray-light;
 
-  .controls {
+    &.active,
+    .answer:hover & {
+      background-color: @brand-primary;
+      border-color: @brand-primary;
+      color: #ffffff;
+    }
+  }
+
+  &__text {
+    color: @gray;
+    font-family: @font-family-sans-serif;
+    margin: 0;
+  }
+
+  &__controls {
+    padding-top: @grid-gutter-width / 2;
+
+  }
+
+  &__footer {
+    .make-row();
     margin-top: 200px;
     padding-bottom: 1em;
   }
 }
-

@@ -21,29 +21,28 @@ header.test__container
   .pagination__container
     ul.pagination(ng-controller='pagination')
       li(ng-repeat='page in pages')
-        a.pagination__link(href="#", class='{{page.class}}') {{$index + 1}}
+        a.pagination__link(href="#" class='{{page.class}}') {{$index + 1}}
 
-.row-question(ng-controller='question')
-  .col-question
+.question__container(ng-controller='question')
+  .question__col--main
     | {{question.id}} &nbsp;
     span(ng-bind-html='question.question')
 
-  .col-answers
-    .row-answer(ng-repeat='answer in question.answers')
-      .col-letter
-        .answer-letter {{answer.label}}
+  .question__col--answer
+    .answer(ng-repeat='answer in question.answers')
+      .answer__col--letter
+        .answer__letter {{answer.label}}
 
-      .col-answer(class='{{answer.class}}')
-        h4.answer-text {{answer.text}}
+      .answer__col--main(class='{{answer.class}}')
+        h4.answer__text {{answer.text}}
 
 
-    .answer-controls
+    .answer__controls
       .text-center
         .btn.btn-default.btn-xs
-          .fa.fa-flag
-          |  Flag Question
+          .fa.fa-flag  Flag Question
 
-      .row.controls
+      .answer__footer
         .col-xs-5.col-xs-offset-1
           .btn.btn-block.btn-default PREV. QUESTION
         .col-xs-5
